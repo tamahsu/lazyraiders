@@ -1,132 +1,25 @@
-[
-{
-    "name": "馬神",
-    "realm": "frostmane",
-    "nickname": "馬神"
-},
-{
-    "name": "痛都我在痛",
-    "realm": "frostmane",
-    "nickname": "痛都我在痛"
-},
-{
-    "name": "Bluewhale",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "你有罪",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "小河豚",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "小雪特",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "弗蘭克",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "搖滾樂",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "撒旦的羽翼",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "比祈",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "海派兔",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "聖光汁液",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "葑菲",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "血晴依",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "訣郢",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "超級大白痴",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "血晴依",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "零式",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "飛一般的豬",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "姚小彤",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "希爾緋",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "爐烤香料肋眼",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "北宮飛雲",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "天之下",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "凱克洛斯",
-    "realm": "frostmane",
-    "nickname": ""
-},
-{
-    "name": "娘娘千歲",
-    "realm": "frostmane",
-    "nickname": ""
-}
- ]
+先發制人-天空之牆
+Cartier-聖光之願
+沙發鋼鐵直-聖光之願
+奈芙緹緹-日落沼澤
+Shortgoose-聖光之願
+葛潔爾-憤怒使者
+慕斯丸-世界之樹
+湯姆傑利-聖光之願
+醬油苦瓜-聖光之願
+泰坦爸爸-銀翼要塞
+卡特皮勒斯-屠魔山谷
+Oriontsai-聖光之願
+月穹狼龍-日落沼澤
+Darc-聖光之願
+鮪魚水手-聖光之願
+雪舞-聖光之願
+熊熊貝爾-日落沼澤
+煙消雲散-憤怒使者
+Yinuo-天空之牆
+霜凍之楓-聖光之願
+Raw-聖光之願
+銀華月魂-天空之牆
+雙馬尾矮子-屠魔山谷
+Mackenzie-銀翼要塞
+雨後之月-聖光之願
