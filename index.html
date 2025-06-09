@@ -47,42 +47,45 @@
                             return fetch(url)
                                 .then(response => response.json())
                                 .then(json => {
-                                    const runs = json.mythic_plus_weekly_highest_level_runs || [];
-                                    const gear = json.gear;
+    const runs = json.mythic_plus_weekly_highest_level_runs || [];
+    const gear = json.gear;
+    const backupRuns = json.mythic_plus_best_runs || []; // 新增：抓過去最好成績當備用
 
-                                    // Check if gear is defined
-                                    if (!gear) {
-                                        console.warn(`Gear is undefined for ${name}`);
-                                        return null;
-                                    }
+    if (!gear) {
+        console.warn(`Gear is undefined for ${name}`);
+        return null;
+    }
 
-                                    // Log the gear items to understand their structure
-                                    console.log(`Gear items for ${name}:`, gear.items);
+    const tierPieces = {};
+    tierSlots.forEach(slot => {
+        if (gear.items && gear.items[slot] && gear.items[slot].tier && gear.items[slot].tier !== 999) {
+            const item = gear.items[slot];
+            tierPieces[item.tier] = (tierPieces[item.tier] || 0) + 1;
+        }
+    });
 
-                                    // Count tier pieces from specific items
-                                    const tierPieces = {};
-                                    tierSlots.forEach(slot => {
-                                        if (gear.items && gear.items[slot] && gear.items[slot].tier && gear.items[slot].tier !== 999) {
-                                            const item = gear.items[slot];
-                                            tierPieces[item.tier] = (tierPieces[item.tier] || 0) + 1;
-                                        }
-                                    });
+    const keysThresholdPlus = runs.filter(run => run.mythic_level >= keyThreshold).length;
 
-                                    // Count the number of keys done at or above the keyThreshold
-                                    const keysThresholdPlus = runs.filter(run => run.mythic_level >= keyThreshold).length;
+    // 判斷用本週資料還是備用資料
+    const run = runs[0] || backupRuns[0] || null;
+    const highestKeyInfo = run ? `${run.mythic_level}` : 'n/a';
+    const runDate = run ? new Date(run.completed_at).toISOString().split('T')[0] : 'n/a';
 
-                                    const run = runs[0] || null;
-                                    const highestKeyInfo = run ? `${run.mythic_level}` : 'n/a';
+    // 顯示備註
+    if (!runs[0] && backupRuns[0]) {
+        console.log(`🟡 ${name} 本週沒打鑰，顯示上次成績 ${highestKeyInfo}（${runDate}）`);
+    }
 
-                                    return {
-                                        name,
-                                        ilvl: gear && gear.item_level_equipped ? Math.round(gear.item_level_equipped) : null,
-                                        highestKey: highestKeyInfo,
-                                        time: run ? new Date(run.completed_at).toISOString().split('T')[0] : 'n/a',
-                                        tierPieces,
-                                        keysThresholdPlus
-                                    };
-                                })
+    return {
+        name,
+        ilvl: gear && gear.item_level_equipped ? Math.round(gear.item_level_equipped) : null,
+        highestKey: highestKeyInfo,
+        time: runDate,
+        tierPieces,
+        keysThresholdPlus
+    };
+})
+
                                 .catch(error => {
                                     console.error('Error fetching data for player:', name, error);
                                     return null;
